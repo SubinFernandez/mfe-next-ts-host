@@ -1,0 +1,18 @@
+.root {
+  background-color: #d2dae2;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 10px 5px;
+}
+
+.nav_item {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 5px 15px;
+}
