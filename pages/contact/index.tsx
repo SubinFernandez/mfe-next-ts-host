@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
+import LoadingSpinner from '../../src/components/loading-spinner'
+
 declare global {
   interface FederatedModule {
     get: (path: string) => Promise<CallableFunction>
@@ -14,7 +16,10 @@ declare global {
 const RemoteContact = dynamic(() => {
   return window.contactApp?.get("./contact").then((factory) => factory())
 }, {
-  ssr: false
+  ssr: false,
+  loading: function loadingSpinner() {
+    return <LoadingSpinner />
+  }
 })
 
 const ContactPage: NextPage = () => {
