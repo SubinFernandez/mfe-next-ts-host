@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang='en'>
         <Head />
         <body>
           {/* eslint-disable @next/next/no-sync-scripts */}
